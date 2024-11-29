@@ -84,14 +84,14 @@ angular(A,B,C,D) :-
     D is 2*pi-C.
 
 % query
-'urn:example:quotient'([[1,0],[0,1]],_ANSWER) -: true.
-'urn:example:exponentiation'([[-1,0],[0.5,0]],_ANSWER) -: true.
-X is 0+e,'urn:example:exponentiation'([[X,0],[0,pi]],_ANSWER) -: true.
-X is 0+e,'urn:example:log'([[X,0],[-1,0]],_ANSWER) -: true.
-'urn:example:log'([[0,1],[0,1]],_ANSWER) -: true.
-'urn:example:sin'([1.570796326794897,1.316957896924817],_ANSWER) -: true.
-'urn:example:cos'([0,-1.316957896924817],_ANSWER) -: true.
-'urn:example:tan'([1.338972522294493,0.4023594781085251],_ANSWER) -: true.
-'urn:example:asin'([2,0],_ANSWER) -: true.
-'urn:example:acos'([2,0],_ANSWER) -: true.
-'urn:example:atan'([1,2],_ANSWER) -: true.
+'urn:example:quotient'([[1,0],[0,1]],_ANSWER) :+ true.
+'urn:example:exponentiation'([[-1,0],[0.5,0]],_ANSWER) :+ true.
+X is 0+e,'urn:example:exponentiation'([[X,0],[0,pi]],_ANSWER) :+ true.
+X is 0+e,'urn:example:log'([[X,0],[-1,0]],_ANSWER) :+ true.
+'urn:example:log'([[0,1],[0,1]],_ANSWER) :+ true.
+'urn:example:sin'([1.570796326794897,1.316957896924817],_ANSWER) :+ true.
+'urn:example:cos'([0,-1.316957896924817],_ANSWER) :+ true.
+'urn:example:tan'([1.338972522294493,0.4023594781085251],_ANSWER) :+ true.
+'urn:example:asin'([2,0],_ANSWER) :+ true.
+'urn:example:acos'([2,0],_ANSWER) :+ true.
+'urn:example:atan'([1,2],_ANSWER) :+ true.

@@ -24,5 +24,5 @@ fac(s(A),B,C) :-
 % query
 'urn:example:multiply'(s(0),s(s(0)),A),
 'urn:example:add'(A,s(s(s(0))),B),
-'urn:example:factorial'(B,_C) -:
+'urn:example:factorial'(B,_C) :+
     true.

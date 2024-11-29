@@ -1,3 +1,3 @@
-:- op(1150,xfx,-:).
+:- op(1150,xfx,:+).
 
-(true-:'urn:example:is'(_, 'urn:example:good'('urn:example:Cobbler')))-:true.
+(true:+'urn:example:is'(_, 'urn:example:good'('urn:example:Cobbler'))):+true.

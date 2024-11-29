@@ -5,16 +5,14 @@
 % See https://github.com/eyereasoner/eye2
 %
 
-:- op(1150,xfx,-:).
+:- op(1150,xfx,:+).
 
-:- dynamic((-:)/2).
+:- dynamic((:+)/2).
 :- dynamic(answer/1).
 :- dynamic(brake/0).
 :- dynamic(ether/3).
 
-term_expansion((Head :- Body),(Head :- Body)).
-
-version_info('eye2 v0.0.1 (2024-11-29)').
+version_info('eye2 v1.0.0 (2024-11-29)').
 
 % main goal
 main :-
@@ -22,8 +20,8 @@ main :-
     nb_setval(limit,-1),
     nb_setval(fm,0),
     nb_setval(mf,0),
-    (   (_ -: _)
-    ->  format(":- op(1150,xfx,-:).~n~n",[])
+    (   (_ :+ _)
+    ->  format(":- op(1150,xfx,:+).~n~n",[])
     ;   version_info(Version),
         format("~w~n",[Version])
     ),
@@ -42,7 +40,7 @@ main :-
 
 % run eye2 abstract machine
 %
-% 1/ select rule P -: C
+% 1/ select rule P :+ C
 % 2/ prove P and if it fails backtrack to 1/
 % 3/ if C = true assert answer(P)
 %    else if C = false stop with return code 2
@@ -50,12 +48,12 @@ main :-
 % 4/ backtrack to 2/ and if it fails go to 5/
 % 5/ if brake
 %       if not stable start again at 1/
-%       else output all answers as P -: true and stop
+%       else output all answers as P :+ true and stop
 %    else assert brake and start again at 1/
 %
 run :-
-    (   (Prem -: Conc),     % 1/
-        copy_term((Prem -: Conc),Rule,_),
+    (   (Prem :+ Conc),     % 1/
+        copy_term((Prem :+ Conc),Rule,_),
         Prem,               % 2/
         (   Conc = true     % 3/
         ->  (   \+answer(Prem)
@@ -64,11 +62,11 @@ run :-
             )
         ;   (   Conc = false
             ->  format("% inference fuse, return code 2~n",[]),
-                portray_clause((Prem -: false)),
+                portray_clause((Prem :+ false)),
                 halt(2)
             ;   (   term_variables(Conc,[])
                 ->  Concl = Conc
-                ;   Concl = (true -: Conc)
+                ;   Concl = (true :+ Conc)
                 ),
                 \+Concl,
                 astep(Concl),
@@ -85,7 +83,7 @@ run :-
                 nb_setval(closure,NewClosure),
                 run
             ;   answer(Prem),
-                portray_clause((Prem -: true)),
+                portray_clause((Prem :+ true)),
                 fail
             ;   (   ether(_,_,_)
                 ->  format("~n%~n% Explain the reasoning~n%~n~n",[]),

@@ -13,4 +13,4 @@
     Dl >= Db.
 
 % query
-'urn:example:ageAbove'(_S,80) -: true.
+'urn:example:ageAbove'(_S,80) :+ true.

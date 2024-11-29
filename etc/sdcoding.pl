@@ -97,8 +97,8 @@ bob([X,Y],3) :-
     ).
 
 % superdense coding appearing an odd number of times
-'urn:example:sdc'(N,M) -:
+'urn:example:sdc'(N,M) :+
     'urn:example:sdconot'(N,M).
 
 % query
-'urn:example:sdcoding'(_N,_M) -: true.
+'urn:example:sdcoding'(_N,_M) :+ true.

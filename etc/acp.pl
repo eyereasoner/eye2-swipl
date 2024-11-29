@@ -47,5 +47,5 @@
 'urn:example:Policy'(A),
 'urn:example:pass'(A,'urn:example:allOfTest'),
 'urn:example:pass'(A,'urn:example:anyOfTest'),
-'urn:example:pass'(A,'urn:example:noneOfTest') -:
+'urn:example:pass'(A,'urn:example:noneOfTest') :+
     true.

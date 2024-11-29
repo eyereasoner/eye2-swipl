@@ -32,14 +32,14 @@ ackermann(A,B,C,D) :-
     ackermann(G,F,C,D).
 
 % query
-'urn:example:ackermann'([0,6],_ANSWER) -: true.
-'urn:example:ackermann'([1,2],_ANSWER) -: true.
-'urn:example:ackermann'([1,7],_ANSWER) -: true.
-'urn:example:ackermann'([2,2],_ANSWER) -: true.
-'urn:example:ackermann'([2,9],_ANSWER) -: true.
-'urn:example:ackermann'([3,4],_ANSWER) -: true.
-'urn:example:ackermann'([3,14],_ANSWER) -: true.
-'urn:example:ackermann'([4,0],_ANSWER) -: true.
-'urn:example:ackermann'([4,1],_ANSWER) -: true.
-'urn:example:ackermann'([4,2],_ANSWER) -: true.
-'urn:example:ackermann'([5,0],_ANSWER) -: true.
+'urn:example:ackermann'([0,6],_ANSWER) :+ true.
+'urn:example:ackermann'([1,2],_ANSWER) :+ true.
+'urn:example:ackermann'([1,7],_ANSWER) :+ true.
+'urn:example:ackermann'([2,2],_ANSWER) :+ true.
+'urn:example:ackermann'([2,9],_ANSWER) :+ true.
+'urn:example:ackermann'([3,4],_ANSWER) :+ true.
+'urn:example:ackermann'([3,14],_ANSWER) :+ true.
+'urn:example:ackermann'([4,0],_ANSWER) :+ true.
+'urn:example:ackermann'([4,1],_ANSWER) :+ true.
+'urn:example:ackermann'([4,2],_ANSWER) :+ true.
+'urn:example:ackermann'([5,0],_ANSWER) :+ true.

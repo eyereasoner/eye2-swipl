@@ -43,7 +43,7 @@ t([1,1,0,l],1).
 t([1,"#",1,s],halt).
 
 % query
-'urn:example:compute'([1,0,1,0,0,1],_ANSWER) -: true.
-'urn:example:compute'([1,0,1,1,1,1],_ANSWER) -: true.
-'urn:example:compute'([1,1,1,1,1,1],_ANSWER) -: true.
-'urn:example:compute'([],_ANSWER) -: true.
+'urn:example:compute'([1,0,1,0,0,1],_ANSWER) :+ true.
+'urn:example:compute'([1,0,1,1,1,1],_ANSWER) :+ true.
+'urn:example:compute'([1,1,1,1,1,1],_ANSWER) :+ true.
+'urn:example:compute'([],_ANSWER) :+ true.

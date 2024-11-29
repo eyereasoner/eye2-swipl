@@ -49,4 +49,4 @@
     M1 >= M2.
 
 % query
-'urn:example:control1'(_O,_C) -: true.
+'urn:example:control1'(_O,_C) :+ true.

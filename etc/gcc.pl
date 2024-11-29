@@ -46,4 +46,4 @@ inv(0,1).
 inv(1,0).
 
 % query
-'urn:example:gcc'([1,1,1,1,1,1,1,1,1],[0,0,0],_ANSWER) -: true.
+'urn:example:gcc'([1,1,1,1,1,1,1,1,1],[0,0,0],_ANSWER) :+ true.

@@ -10018,4 +10018,4 @@
     call(A,K,B).
 
 % query
-'urn:example:cycle'(_A,_CYCLE) -: true.
+'urn:example:cycle'(_A,_CYCLE) :+ true.

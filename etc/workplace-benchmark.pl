@@ -20,11 +20,11 @@
     true.
 
 % Rules to check if an action complies with deontic logic
-'urn:example:does'(Person,'urn:example:work_related_task'),'urn:example:does'(Person,'urn:example:log_off_at_end_of_shift') -: 'urn:example:complies'(Person,true).
-'urn:example:does'(Person,'urn:example:work_related_task'),\+'urn:example:does'(Person,'urn:example:log_off_at_end_of_shift') -: 'urn:example:complies'(Person,false).
-'urn:example:does'(Person,'urn:example:log_off_at_end_of_shift') -: 'urn:example:complies'(Person,true).
-'urn:example:does'(Person,'urn:example:access_social_media') -: 'urn:example:complies'(Person,false).
+'urn:example:does'(Person,'urn:example:work_related_task'),'urn:example:does'(Person,'urn:example:log_off_at_end_of_shift') :+ 'urn:example:complies'(Person,true).
+'urn:example:does'(Person,'urn:example:work_related_task'),\+'urn:example:does'(Person,'urn:example:log_off_at_end_of_shift') :+ 'urn:example:complies'(Person,false).
+'urn:example:does'(Person,'urn:example:log_off_at_end_of_shift') :+ 'urn:example:complies'(Person,true).
+'urn:example:does'(Person,'urn:example:access_social_media') :+ 'urn:example:complies'(Person,false).
 
 % Query to test if everyone complies with deontic logic
-'urn:example:prepare'(1,30000) -: true.
-'urn:example:complies'(_Person,_Check) -: true.
+'urn:example:prepare'(1,30000) :+ true.
+'urn:example:complies'(_Person,_Check) :+ true.
