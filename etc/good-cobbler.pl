@@ -5,7 +5,7 @@
 :- dynamic('urn:example:is'/2).
 
 % some x is a good cobbler
-true :+ 'urn:example:is'(_X,'urn:example:good'('urn:example:Cobbler')).
+true :+ 'urn:example:is'(_X, 'urn:example:good'('urn:example:Cobbler')).
 
 % is there some x which is good at some y
-(true :+ 'urn:example:is'(_X,'urn:example:good'(_Y))) :+ true.
+(true :+ 'urn:example:is'(_X, 'urn:example:good'(_Y))) :+ true.

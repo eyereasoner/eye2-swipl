@@ -10,7 +10,7 @@ conclusion-only variables which are interpreted existentially.
 
 Queries are posed and answered as `prem :+ true.`
 
-Proofs steps are `ether((prem :+ conc),prem_inst,conc_inst).`
+Proofs steps are `ether((prem :+ conc), prem_inst, conc_inst).`
 
 Inference fuses return code 2 with output `prem :+ false.`
 

@@ -1,4 +1,4 @@
-:- op(1150,xfx,:+).
+:- op(1150, xfx, :+).
 
 'urn:example:path'('urn:example:angers', 'urn:example:nantes'):+true.
 'urn:example:path'('urn:example:lemans', 'urn:example:nantes'):+true.

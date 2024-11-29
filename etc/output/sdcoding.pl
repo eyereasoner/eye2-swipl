@@ -1,4 +1,4 @@
-:- op(1150,xfx,:+).
+:- op(1150, xfx, :+).
 
 'urn:example:sdcoding'(1, 1):+true.
 'urn:example:sdcoding'(3, 3):+true.

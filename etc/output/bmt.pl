@@ -1,4 +1,4 @@
-:- op(1150,xfx,:+).
+:- op(1150, xfx, :+).
 
 'urn:example:cycle'('urn:example:i89', ['urn:example:i48', 'urn:example:i48', 'urn:example:i48', 'urn:example:i48', 'urn:example:i48', 'urn:example:i48', 'urn:example:i48', 'urn:example:i48', 'urn:example:i48', 'urn:example:i48', 'urn:example:i48']):+true.
 'urn:example:cycle'('urn:example:i89', ['urn:example:i9', 'urn:example:i9', 'urn:example:i9', 'urn:example:i9', 'urn:example:i9', 'urn:example:i9', 'urn:example:i9', 'urn:example:i9', 'urn:example:i9', 'urn:example:i9', 'urn:example:i9']):+true.

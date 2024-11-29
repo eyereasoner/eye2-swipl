@@ -5,7 +5,7 @@
 % See https://github.com/eyereasoner/eye2
 %
 
-:- op(1150,xfx,:+).
+:- op(1150, xfx, :+).
 
 :- dynamic((:+)/2).
 :- dynamic(answer/1).
@@ -16,25 +16,25 @@ version_info('eye2 v1.0.0 (2024-11-29)').
 
 % main goal
 main :-
-    nb_setval(closure,0),
-    nb_setval(limit,-1),
-    nb_setval(fm,0),
-    nb_setval(mf,0),
+    nb_setval(closure, 0),
+    nb_setval(limit, -1),
+    nb_setval(fm, 0),
+    nb_setval(mf, 0),
     (   (_ :+ _)
-    ->  format(":- op(1150,xfx,:+).~n~n",[])
+    ->  format(":- op(1150, xfx, :+).~n~n", [])
     ;   version_info(Version),
-        format("~w~n",[Version])
+        format("~w~n", [Version])
     ),
     run,
-    nb_getval(fm,Fm),
+    nb_getval(fm, Fm),
     (   Fm = 0
     ->  true
-    ;   format(user_error,"*** fm=~w~n",[Fm])
+    ;   format(user_error, "*** fm=~w~n", [Fm])
     ),
-    nb_getval(mf,Mf),
+    nb_getval(mf, Mf),
     (   Mf = 0
     ->  true
-    ;   format(user_error,"*** mf=~w~n",[Mf])
+    ;   format(user_error, "*** mf=~w~n", [Mf])
     ),
     halt(0).
 
@@ -53,7 +53,7 @@ main :-
 %
 run :-
     (   (Prem :+ Conc),     % 1/
-        copy_term((Prem :+ Conc),Rule,_),
+        copy_term((Prem :+ Conc), Rule, _),
         Prem,               % 2/
         (   Conc = true     % 3/
         ->  (   \+answer(Prem)
@@ -61,34 +61,34 @@ run :-
             ;   true
             )
         ;   (   Conc = false
-            ->  format("% inference fuse, return code 2~n",[]),
+            ->  format("% inference fuse, return code 2~n", []),
                 portray_clause((Prem :+ false)),
                 halt(2)
-            ;   (   term_variables(Conc,[])
+            ;   (   term_variables(Conc, [])
                 ->  Concl = Conc
                 ;   Concl = (true :+ Conc)
                 ),
                 \+Concl,
                 astep(Concl),
-                assertz(ether(Rule,Prem,Concl)),
+                assertz(ether(Rule, Prem, Concl)),
                 retract(brake)
             )
         ),
         fail                % 4/
     ;   (   brake           % 5/
-        ->  (   nb_getval(closure,Closure),
-                nb_getval(limit,Limit),
+        ->  (   nb_getval(closure, Closure),
+                nb_getval(limit, Limit),
                 Closure < Limit,
                 NewClosure is Closure+1,
-                nb_setval(closure,NewClosure),
+                nb_setval(closure, NewClosure),
                 run
             ;   answer(Prem),
                 portray_clause((Prem :+ true)),
                 fail
-            ;   (   ether(_,_,_)
-                ->  format("~n%~n% Explain the reasoning~n%~n~n",[]),
-                    ether(Rule,Prem,Conc),
-                    portray_clause(ether(Rule,Prem,Conc)),
+            ;   (   ether(_, _, _)
+                ->  format("~n%~n% Explain the reasoning~n%~n~n", []),
+                    ether(Rule, Prem, Conc),
+                    portray_clause(ether(Rule, Prem, Conc)),
                     fail
                 ;   true
                 )
@@ -100,7 +100,7 @@ run :-
     ).
 
 % assert new step
-astep((B,C)) :-
+astep((B, C)) :-
     astep(B),
     astep(C).
 astep(A) :-
@@ -112,29 +112,29 @@ astep(A) :-
 % stable(+Level)
 %   fail if the deductive closure at Level is not yet stable
 stable(Level) :-
-    nb_getval(limit,Limit),
+    nb_getval(limit, Limit),
     (   Limit < Level
-    ->  nb_setval(limit,Level)
+    ->  nb_setval(limit, Level)
     ;   true
     ),
-    nb_getval(closure,Closure),
+    nb_getval(closure, Closure),
     Level =< Closure.
 
 % debugging tools
 fm(A) :-
-    write(user_error,'*** '),
-    portray_clause(user_error,A),
-    nb_getval(fm,B),
+    write(user_error, '*** '),
+    portray_clause(user_error, A),
+    nb_getval(fm, B),
     C is B+1,
-    nb_setval(fm,C).
+    nb_setval(fm, C).
 
 mf(A) :-
     forall(
-        catch(A,_,fail),
-        (   write(user_error,'*** '),
-            portray_clause(user_error,A),
-            nb_getval(mf,B),
+        catch(A, _, fail),
+        (   write(user_error, '*** '),
+            portray_clause(user_error, A),
+            nb_getval(mf, B),
             C is B+1,
-            nb_setval(mf,C)
+            nb_setval(mf, C)
         )
     ).

@@ -1,4 +1,4 @@
-:- op(1150,xfx,:+).
+:- op(1150, xfx, :+).
 
 'urn:example:complies'('urn:example:alice', true):+true.
 'urn:example:complies'('urn:example:carol', false):+true.

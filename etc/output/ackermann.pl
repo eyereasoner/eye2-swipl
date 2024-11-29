@@ -1,4 +1,4 @@
-:- op(1150,xfx,:+).
+:- op(1150, xfx, :+).
 
 'urn:example:ackermann'([0, 6], 7):+true.
 'urn:example:ackermann'([1, 2], 4):+true.

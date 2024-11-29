@@ -1,4 +1,4 @@
-:- op(1150,xfx,:+).
+:- op(1150, xfx, :+).
 
 'urn:example:quotient'([[1, 0], [0, 1]], [0, -1]):+true.
 'urn:example:exponentiation'([[-1, 0], [0.5, 0]], [6.123233995736766e-17, 1.0]):+true.
