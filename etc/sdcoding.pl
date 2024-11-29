@@ -19,8 +19,8 @@
 % exhibit an interference effect: an answer is produced from the junction if it
 % occurs in one or the other branch but not both.
 
-:- dynamic('urn:example:sdcoding'/2).
-:- dynamic('urn:example:sdconot'/2).
+:- dynamic('https://eyereasoner.github.io/etc#sdcoding'/2).
+:- dynamic('https://eyereasoner.github.io/etc#sdconot'/2).
 
 % |R) = |0, 0) + |1, 1)
 r(false, false).
@@ -87,18 +87,18 @@ bob([X, Y], 3) :-
     id(X, Y).
 
 % superdense coding
-'urn:example:sdc'(N, M) :-
+'https://eyereasoner.github.io/etc#sdc'(N, M) :-
     r(X, Y),
     alice(N, [X, B]),
     bob([B, Y], M),
-    (   'urn:example:sdcoding'(N, M)
-    ->  retract('urn:example:sdcoding'(N, M))
-    ;   assertz('urn:example:sdcoding'(N, M))
+    (   'https://eyereasoner.github.io/etc#sdcoding'(N, M)
+    ->  retract('https://eyereasoner.github.io/etc#sdcoding'(N, M))
+    ;   assertz('https://eyereasoner.github.io/etc#sdcoding'(N, M))
     ).
 
 % superdense coding appearing an odd number of times
-'urn:example:sdc'(N, M) :+
-    'urn:example:sdconot'(N, M).
+'https://eyereasoner.github.io/etc#sdc'(N, M) :+
+    'https://eyereasoner.github.io/etc#sdconot'(N, M).
 
 % query
-'urn:example:sdcoding'(_N, _M) :+ true.
+'https://eyereasoner.github.io/etc#sdcoding'(_N, _M) :+ true.

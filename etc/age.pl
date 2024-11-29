@@ -1,11 +1,11 @@
 % age checker
 
 % person data
-'urn:example:birthDay'('urn:example:patH', [1944, 8, 21]).
+'https://eyereasoner.github.io/etc#birthDay'('https://eyereasoner.github.io/etc#patH', [1944, 8, 21]).
 
 % is the age of a person above some years?
-'urn:example:ageAbove'(S, A) :-
-    'urn:example:birthDay'(S, [Yb, Mb, Db]),
+'https://eyereasoner.github.io/etc#ageAbove'(S, A) :-
+    'https://eyereasoner.github.io/etc#birthDay'(S, [Yb, Mb, Db]),
     get_time(T),
     stamp_date_time(T, date(Yl, Ml, Dl, _, _, _, _, _, _), 0),
     Yl >= Yb+A,
@@ -13,4 +13,4 @@
     Dl >= Db.
 
 % query
-'urn:example:ageAbove'(_S, 80) :+ true.
+'https://eyereasoner.github.io/etc#ageAbove'(_S, 80) :+ true.

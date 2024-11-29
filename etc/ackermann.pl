@@ -2,7 +2,7 @@
 % See https://en.wikipedia.org/wiki/Ackermann_function
 
 % ackermann(x, y, z)
-'urn:example:ackermann'([A, B], C) :-
+'https://eyereasoner.github.io/etc#ackermann'([A, B], C) :-
     D is B+3,
     ackermann(A, D, 2, E),
     C is E-3.
@@ -32,14 +32,14 @@ ackermann(A, B, C, D) :-
     ackermann(G, F, C, D).
 
 % query
-'urn:example:ackermann'([0, 6], _ANSWER) :+ true.
-'urn:example:ackermann'([1, 2], _ANSWER) :+ true.
-'urn:example:ackermann'([1, 7], _ANSWER) :+ true.
-'urn:example:ackermann'([2, 2], _ANSWER) :+ true.
-'urn:example:ackermann'([2, 9], _ANSWER) :+ true.
-'urn:example:ackermann'([3, 4], _ANSWER) :+ true.
-'urn:example:ackermann'([3, 14], _ANSWER) :+ true.
-'urn:example:ackermann'([4, 0], _ANSWER) :+ true.
-'urn:example:ackermann'([4, 1], _ANSWER) :+ true.
-'urn:example:ackermann'([4, 2], _ANSWER) :+ true.
-'urn:example:ackermann'([5, 0], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([0, 6], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([1, 2], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([1, 7], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([2, 2], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([2, 9], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([3, 4], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([3, 14], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([4, 0], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([4, 1], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([4, 2], _ANSWER) :+ true.
+'https://eyereasoner.github.io/etc#ackermann'([5, 0], _ANSWER) :+ true.

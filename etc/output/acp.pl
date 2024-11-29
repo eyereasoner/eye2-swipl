@@ -1,3 +1,3 @@
 :- op(1150, xfx, :+).
 
-'urn:example:Policy'('urn:example:PolicyX'), 'urn:example:pass'('urn:example:PolicyX', 'urn:example:allOfTest'), 'urn:example:pass'('urn:example:PolicyX', 'urn:example:anyOfTest'), 'urn:example:pass'('urn:example:PolicyX', 'urn:example:noneOfTest'):+true.
+'https://eyereasoner.github.io/etc#Policy'('https://eyereasoner.github.io/etc#PolicyX'), 'https://eyereasoner.github.io/etc#pass'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#allOfTest'), 'https://eyereasoner.github.io/etc#pass'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#anyOfTest'), 'https://eyereasoner.github.io/etc#pass'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#noneOfTest'):+true.

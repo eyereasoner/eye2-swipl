@@ -2,7 +2,7 @@
 % See background paper https://arxiv.org/pdf/2010.12027.pdf
 
 % find paths in the state space from initial state to goal state within limits
-'urn:example:findpath'(_SCOPE, [Goal, Path, Duration, Cost, Belief, Comfort, Limits]) :-
+'https://eyereasoner.github.io/etc#findpath'(_SCOPE, [Goal, Path, Duration, Cost, Belief, Comfort, Limits]) :-
     findpaths([], Goal, [], 0.0, 0.0, 1.0, 1.0, Path, Duration, Cost, Belief, Comfort, Limits).
 
 findpaths(_Maps, Goal, Path, Duration, Cost, Belief, Comfort, Path, Duration, Cost, Belief, Comfort, _Limits) :-
@@ -10,10 +10,10 @@ findpaths(_Maps, Goal, Path, Duration, Cost, Belief, Comfort, Path, Duration, Co
     !.
 findpaths(Maps_s, Goal, Path_s, Duration_s, Cost_s, Belief_s, Comfort_s, Path, Duration, Cost, Belief, Comfort, Limits) :-
     Limits = [MaxDuration, MaxCost, MinBelief, MinComfort, MaxStagecount],
-    clause('urn:example:description'(Map, [From, Transition, To, Action, Duration_n, Cost_n, Belief_n, Comfort_n]), Where),
+    clause('https://eyereasoner.github.io/etc#description'(Map, [From, Transition, To, Action, Duration_n, Cost_n, Belief_n, Comfort_n]), Where),
     From,
     Where,
-    'urn:example:description'(Map, [From, Transition, To, Action, Duration_n, Cost_n, Belief_n, Comfort_n]),
+    'https://eyereasoner.github.io/etc#description'(Map, [From, Transition, To, Action, Duration_n, Cost_n, Belief_n, Comfort_n]),
     append(Maps_s, [Map], Maps_t),
     stagecount(Maps_t, Stagecount),
     Stagecount =< MaxStagecount,
@@ -56,52 +56,52 @@ conj_list((A, B), [A|C]) :-
     conj_list(B, C).
 
 % test data
-:- dynamic('urn:example:description'/2).
-:- dynamic('urn:example:location'/2).
+:- dynamic('https://eyereasoner.github.io/etc#description'/2).
+:- dynamic('https://eyereasoner.github.io/etc#location'/2).
 
 % partial map of Belgium
-'urn:example:description'(
-    'urn:example:map_be',
-    [   'urn:example:location'(S, 'urn:example:gent'),
+'https://eyereasoner.github.io/etc#description'(
+    'https://eyereasoner.github.io/etc#map_be',
+    [   'https://eyereasoner.github.io/etc#location'(S, 'https://eyereasoner.github.io/etc#gent'),
         true,
-        'urn:example:location'(S, 'urn:example:brugge'),
-        'urn:example:drive_gent_brugge',
+        'https://eyereasoner.github.io/etc#location'(S, 'https://eyereasoner.github.io/etc#brugge'),
+        'https://eyereasoner.github.io/etc#drive_gent_brugge',
         1500.0,
         0.006,
         0.96,
         0.99
     ]
 ).
-'urn:example:description'(
-    'urn:example:map_be',
-    [   'urn:example:location'(S, 'urn:example:gent'),
+'https://eyereasoner.github.io/etc#description'(
+    'https://eyereasoner.github.io/etc#map_be',
+    [   'https://eyereasoner.github.io/etc#location'(S, 'https://eyereasoner.github.io/etc#gent'),
         true,
-        'urn:example:location'(S, 'urn:example:kortrijk'),
-        'urn:example:drive_gent_kortrijk',
+        'https://eyereasoner.github.io/etc#location'(S, 'https://eyereasoner.github.io/etc#kortrijk'),
+        'https://eyereasoner.github.io/etc#drive_gent_kortrijk',
         1600.0,
         0.007,
         0.96,
         0.99
     ]
 ).
-'urn:example:description'(
-    'urn:example:map_be',
-    [   'urn:example:location'(S, 'urn:example:kortrijk'),
+'https://eyereasoner.github.io/etc#description'(
+    'https://eyereasoner.github.io/etc#map_be',
+    [   'https://eyereasoner.github.io/etc#location'(S, 'https://eyereasoner.github.io/etc#kortrijk'),
         true,
-        'urn:example:location'(S, 'urn:example:brugge'),
-        'urn:example:drive_kortrijk_brugge',
+        'https://eyereasoner.github.io/etc#location'(S, 'https://eyereasoner.github.io/etc#brugge'),
+        'https://eyereasoner.github.io/etc#drive_kortrijk_brugge',
         1600.0,
         0.007,
         0.96,
         0.99
     ]
 ).
-'urn:example:description'(
-    'urn:example:map_be',
-    [   'urn:example:location'(S, 'urn:example:brugge'),
+'https://eyereasoner.github.io/etc#description'(
+    'https://eyereasoner.github.io/etc#map_be',
+    [   'https://eyereasoner.github.io/etc#location'(S, 'https://eyereasoner.github.io/etc#brugge'),
         true,
-        'urn:example:location'(S, 'urn:example:oostende'),
-        'urn:example:drive_brugge_oostende',
+        'https://eyereasoner.github.io/etc#location'(S, 'https://eyereasoner.github.io/etc#oostende'),
+        'https://eyereasoner.github.io/etc#drive_brugge_oostende',
         900.0,
         0.004,
         0.98,
@@ -110,12 +110,12 @@ conj_list((A, B), [A|C]) :-
 ).
 
 % current state
-'urn:example:location'('urn:example:i1', 'urn:example:gent').
+'https://eyereasoner.github.io/etc#location'('https://eyereasoner.github.io/etc#i1', 'https://eyereasoner.github.io/etc#gent').
 
 % query
-'urn:example:findpath'(
-    'urn:example:map_be',
-    [   'urn:example:location'(_SUBJECT, 'urn:example:oostende'),
+'https://eyereasoner.github.io/etc#findpath'(
+    'https://eyereasoner.github.io/etc#map_be',
+    [   'https://eyereasoner.github.io/etc#location'(_SUBJECT, 'https://eyereasoner.github.io/etc#oostende'),
         _PATH,
         _DURATION,
         _COST,

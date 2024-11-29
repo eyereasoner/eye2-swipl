@@ -1,45 +1,45 @@
 % See https://en.wikipedia.org/wiki/Four_color_theorem
 
-'urn:example:colors'(_Map, Places) :-
-    findall([Place, _], 'urn:example:neighbours'(Place, _), Places),
+'https://eyereasoner.github.io/etc#colors'(_Map, Places) :-
+    findall([Place, _], 'https://eyereasoner.github.io/etc#neighbours'(Place, _), Places),
     places(Places),
     !.
 
 places([]).
 places([[Place, Color]|Tail]) :-
     places(Tail),
-    'urn:example:neighbours'(Place, Neighbours),
-    member(Color, ['urn:example:red', 'urn:example:green', 'urn:example:blue', 'urn:example:yellow']),
+    'https://eyereasoner.github.io/etc#neighbours'(Place, Neighbours),
+    member(Color, ['https://eyereasoner.github.io/etc#red', 'https://eyereasoner.github.io/etc#green', 'https://eyereasoner.github.io/etc#blue', 'https://eyereasoner.github.io/etc#yellow']),
     \+ (member([Neighbour, Color], Tail), member(Neighbour, Neighbours)).
 
 % map of European Union
-'urn:example:neighbours'('urn:example:Belgium', ['urn:example:France', 'urn:example:Netherlands', 'urn:example:Luxemburg', 'urn:example:Germany']).
-'urn:example:neighbours'('urn:example:Netherlands', ['urn:example:Belgium', 'urn:example:Germany']).
-'urn:example:neighbours'('urn:example:Luxemburg', ['urn:example:Belgium', 'urn:example:France', 'urn:example:Germany']).
-'urn:example:neighbours'('urn:example:France', ['urn:example:Spain', 'urn:example:Belgium', 'urn:example:Luxemburg', 'urn:example:Germany', 'urn:example:Italy']).
-'urn:example:neighbours'('urn:example:Germany', ['urn:example:Netherlands', 'urn:example:Belgium''urn:example:Luxemburg', 'urn:example:Denmark', 'urn:example:France', 'urn:example:Austria', 'urn:example:Poland', 'urn:example:Czech_Republic']).
-'urn:example:neighbours'('urn:example:Italy', ['urn:example:France', 'urn:example:Austria', 'urn:example:Slovenia']).
-'urn:example:neighbours'('urn:example:Denmark', ['urn:example:Germany']).
-'urn:example:neighbours'('urn:example:Ireland', []).
-'urn:example:neighbours'('urn:example:Greece', ['urn:example:Bulgaria']).
-'urn:example:neighbours'('urn:example:Spain', ['urn:example:France', 'urn:example:Portugal']).
-'urn:example:neighbours'('urn:example:Portugal', ['urn:example:Spain']).
-'urn:example:neighbours'('urn:example:Austria', ['urn:example:Czech_Republic', 'urn:example:Germany', 'urn:example:Hungary', 'urn:example:Italy', 'urn:example:Slovenia', 'urn:example:Slovakia']).
-'urn:example:neighbours'('urn:example:Sweden', ['urn:example:Finland']).
-'urn:example:neighbours'('urn:example:Finland', ['urn:example:Sweden']).
-'urn:example:neighbours'('urn:example:Cyprus', []).
-'urn:example:neighbours'('urn:example:Malta', []).
-'urn:example:neighbours'('urn:example:Poland', ['urn:example:Germany', 'urn:example:Czech_Republic', 'urn:example:Slovakia', 'urn:example:Lithuania']).
-'urn:example:neighbours'('urn:example:Hungary', ['urn:example:Austria', 'urn:example:Slovakia', 'urn:example:Romania', 'urn:example:Croatia', 'urn:example:Slovenia']).
-'urn:example:neighbours'('urn:example:Czech_Republic', ['urn:example:Germany', 'urn:example:Poland', 'urn:example:Slovakia', 'urn:example:Austria']).
-'urn:example:neighbours'('urn:example:Slovakia', ['urn:example:Czech_Republic', 'urn:example:Poland', 'urn:example:Hungary', 'urn:example:Austria']).
-'urn:example:neighbours'('urn:example:Slovenia', ['urn:example:Austria', 'urn:example:Italy', 'urn:example:Hungary', 'urn:example:Croatia']).
-'urn:example:neighbours'('urn:example:Estonia', ['urn:example:Latvia']).
-'urn:example:neighbours'('urn:example:Latvia', ['urn:example:Estonia', 'urn:example:Lithuania']).
-'urn:example:neighbours'('urn:example:Lithuania', ['urn:example:Latvia', 'urn:example:Poland']).
-'urn:example:neighbours'('urn:example:Bulgaria', ['urn:example:Romania', 'urn:example:Greece']).
-'urn:example:neighbours'('urn:example:Romania', ['urn:example:Hungary', 'urn:example:Bulgaria']).
-'urn:example:neighbours'('urn:example:Croatia', ['urn:example:Slovenia', 'urn:example:Hungary']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Belgium', ['https://eyereasoner.github.io/etc#France', 'https://eyereasoner.github.io/etc#Netherlands', 'https://eyereasoner.github.io/etc#Luxemburg', 'https://eyereasoner.github.io/etc#Germany']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Netherlands', ['https://eyereasoner.github.io/etc#Belgium', 'https://eyereasoner.github.io/etc#Germany']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Luxemburg', ['https://eyereasoner.github.io/etc#Belgium', 'https://eyereasoner.github.io/etc#France', 'https://eyereasoner.github.io/etc#Germany']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#France', ['https://eyereasoner.github.io/etc#Spain', 'https://eyereasoner.github.io/etc#Belgium', 'https://eyereasoner.github.io/etc#Luxemburg', 'https://eyereasoner.github.io/etc#Germany', 'https://eyereasoner.github.io/etc#Italy']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Germany', ['https://eyereasoner.github.io/etc#Netherlands', 'https://eyereasoner.github.io/etc#Belgium''https://eyereasoner.github.io/etc#Luxemburg', 'https://eyereasoner.github.io/etc#Denmark', 'https://eyereasoner.github.io/etc#France', 'https://eyereasoner.github.io/etc#Austria', 'https://eyereasoner.github.io/etc#Poland', 'https://eyereasoner.github.io/etc#Czech_Republic']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Italy', ['https://eyereasoner.github.io/etc#France', 'https://eyereasoner.github.io/etc#Austria', 'https://eyereasoner.github.io/etc#Slovenia']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Denmark', ['https://eyereasoner.github.io/etc#Germany']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Ireland', []).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Greece', ['https://eyereasoner.github.io/etc#Bulgaria']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Spain', ['https://eyereasoner.github.io/etc#France', 'https://eyereasoner.github.io/etc#Portugal']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Portugal', ['https://eyereasoner.github.io/etc#Spain']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Austria', ['https://eyereasoner.github.io/etc#Czech_Republic', 'https://eyereasoner.github.io/etc#Germany', 'https://eyereasoner.github.io/etc#Hungary', 'https://eyereasoner.github.io/etc#Italy', 'https://eyereasoner.github.io/etc#Slovenia', 'https://eyereasoner.github.io/etc#Slovakia']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Sweden', ['https://eyereasoner.github.io/etc#Finland']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Finland', ['https://eyereasoner.github.io/etc#Sweden']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Cyprus', []).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Malta', []).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Poland', ['https://eyereasoner.github.io/etc#Germany', 'https://eyereasoner.github.io/etc#Czech_Republic', 'https://eyereasoner.github.io/etc#Slovakia', 'https://eyereasoner.github.io/etc#Lithuania']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Hungary', ['https://eyereasoner.github.io/etc#Austria', 'https://eyereasoner.github.io/etc#Slovakia', 'https://eyereasoner.github.io/etc#Romania', 'https://eyereasoner.github.io/etc#Croatia', 'https://eyereasoner.github.io/etc#Slovenia']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Czech_Republic', ['https://eyereasoner.github.io/etc#Germany', 'https://eyereasoner.github.io/etc#Poland', 'https://eyereasoner.github.io/etc#Slovakia', 'https://eyereasoner.github.io/etc#Austria']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Slovakia', ['https://eyereasoner.github.io/etc#Czech_Republic', 'https://eyereasoner.github.io/etc#Poland', 'https://eyereasoner.github.io/etc#Hungary', 'https://eyereasoner.github.io/etc#Austria']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Slovenia', ['https://eyereasoner.github.io/etc#Austria', 'https://eyereasoner.github.io/etc#Italy', 'https://eyereasoner.github.io/etc#Hungary', 'https://eyereasoner.github.io/etc#Croatia']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Estonia', ['https://eyereasoner.github.io/etc#Latvia']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Latvia', ['https://eyereasoner.github.io/etc#Estonia', 'https://eyereasoner.github.io/etc#Lithuania']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Lithuania', ['https://eyereasoner.github.io/etc#Latvia', 'https://eyereasoner.github.io/etc#Poland']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Bulgaria', ['https://eyereasoner.github.io/etc#Romania', 'https://eyereasoner.github.io/etc#Greece']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Romania', ['https://eyereasoner.github.io/etc#Hungary', 'https://eyereasoner.github.io/etc#Bulgaria']).
+'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Croatia', ['https://eyereasoner.github.io/etc#Slovenia', 'https://eyereasoner.github.io/etc#Hungary']).
 
 % query
-'urn:example:colors'('urn:example:mapEU', _X) :+ true.
+'https://eyereasoner.github.io/etc#colors'('https://eyereasoner.github.io/etc#mapEU', _X) :+ true.

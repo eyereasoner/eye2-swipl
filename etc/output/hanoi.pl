@@ -1,3 +1,3 @@
 :- op(1150, xfx, :+).
 
-'urn:example:move'(14, [left, centre, right]):+true.
+'https://eyereasoner.github.io/etc#move'(14, [left, centre, right]):+true.

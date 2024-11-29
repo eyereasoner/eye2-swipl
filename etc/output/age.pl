@@ -1,3 +1,3 @@
 :- op(1150, xfx, :+).
 
-'urn:example:ageAbove'('urn:example:patH', 80):+true.
+'https://eyereasoner.github.io/etc#ageAbove'('https://eyereasoner.github.io/etc#patH', 80):+true.
