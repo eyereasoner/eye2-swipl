@@ -1,3 +1,3 @@
-:- op(1150, xfx, <=).
+:- op(1200, xfx, <=).
 
 true<='https://eyereasoner.github.io/etc#ageAbove'('https://eyereasoner.github.io/etc#patH', 80).

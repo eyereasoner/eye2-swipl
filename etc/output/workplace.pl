@@ -1,4 +1,4 @@
-:- op(1150, xfx, <=).
+:- op(1200, xfx, <=).
 
 true<='https://eyereasoner.github.io/etc#complies'('https://eyereasoner.github.io/etc#alice', true).
 true<='https://eyereasoner.github.io/etc#complies'('https://eyereasoner.github.io/etc#carol', false).

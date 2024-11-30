@@ -5,14 +5,14 @@
 % See https://github.com/eyereasoner/eye2
 %
 
-:- op(1150, xfx, <=).
+:- op(1200, xfx, <=).
 
 :- dynamic((<=)/2).
 :- dynamic(answer/1).
 :- dynamic(brake/0).
 :- dynamic(ether/3).
 
-version_info('eye2 v1.0.1 (2024-11-30)').
+version_info('eye2 v1.0.2 (2024-12-01)').
 
 % main goal
 main :-
@@ -21,7 +21,7 @@ main :-
     nb_setval(fm, 0),
     nb_setval(mf, 0),
     (   (_ <= _)
-    ->  format(":- op(1150, xfx, <=).~n~n", [])
+    ->  format(":- op(1200, xfx, <=).~n~n", [])
     ;   version_info(Version),
         format("~w~n", [Version])
     ),

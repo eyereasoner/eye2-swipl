@@ -1,4 +1,4 @@
-:- op(1150, xfx, <=).
+:- op(1200, xfx, <=).
 
 true<='https://eyereasoner.github.io/etc#easter'(2021, [4, 4]).
 true<='https://eyereasoner.github.io/etc#easter'(2022, [4, 17]).

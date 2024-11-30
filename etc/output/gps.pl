@@ -1,4 +1,4 @@
-:- op(1150, xfx, <=).
+:- op(1200, xfx, <=).
 
 true<='https://eyereasoner.github.io/etc#findpath'('https://eyereasoner.github.io/etc#map_be', ['https://eyereasoner.github.io/etc#location'('https://eyereasoner.github.io/etc#i1', 'https://eyereasoner.github.io/etc#oostende'), ['https://eyereasoner.github.io/etc#drive_gent_brugge', 'https://eyereasoner.github.io/etc#drive_brugge_oostende'], 2400.0, 0.01, 0.9408, 0.99, [5000.0, 5.0, 0.2, 0.4, 1]]).
 true<='https://eyereasoner.github.io/etc#findpath'('https://eyereasoner.github.io/etc#map_be', ['https://eyereasoner.github.io/etc#location'('https://eyereasoner.github.io/etc#i1', 'https://eyereasoner.github.io/etc#oostende'), ['https://eyereasoner.github.io/etc#drive_gent_kortrijk', 'https://eyereasoner.github.io/etc#drive_kortrijk_brugge', 'https://eyereasoner.github.io/etc#drive_brugge_oostende'], 4100.0, 0.018000000000000002, 0.903168, 0.9801, [5000.0, 5.0, 0.2, 0.4, 1]]).
