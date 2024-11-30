@@ -19,15 +19,18 @@ padovan(A, B, C, D, E) :-
     B is E/C.
 
 % query
-'https://eyereasoner.github.io/etc#padovan'(1, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#padovan'(2, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#padovan'(3, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#padovan'(4, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#padovan'(5, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#padovan'(91, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#padovan'(283, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#padovan'(3674, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#plastic_ratio'(1, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#plastic_ratio'(10, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#plastic_ratio'(100, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#plastic_ratio'(1000, _ANSWER) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#padovan'(1, _),
+    'https://eyereasoner.github.io/etc#padovan'(2, _),
+    'https://eyereasoner.github.io/etc#padovan'(3, _),
+    'https://eyereasoner.github.io/etc#padovan'(4, _),
+    'https://eyereasoner.github.io/etc#padovan'(5, _),
+    'https://eyereasoner.github.io/etc#padovan'(91, _),
+    'https://eyereasoner.github.io/etc#padovan'(283, _),
+    'https://eyereasoner.github.io/etc#padovan'(3674, _).
+
+true <=
+    'https://eyereasoner.github.io/etc#plastic_ratio'(1, _),
+    'https://eyereasoner.github.io/etc#plastic_ratio'(10, _),
+    'https://eyereasoner.github.io/etc#plastic_ratio'(100, _),
+    'https://eyereasoner.github.io/etc#plastic_ratio'(1000, _).

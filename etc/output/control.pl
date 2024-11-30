@@ -1,4 +1,4 @@
-:- op(1150, xfx, :+).
+:- op(1150, xfx, <=).
 
-'https://eyereasoner.github.io/etc#control1'('https://eyereasoner.github.io/etc#actuator1', 39.27346198678276):+true.
-'https://eyereasoner.github.io/etc#control1'('https://eyereasoner.github.io/etc#actuator2', 26.08):+true.
+true<='https://eyereasoner.github.io/etc#control1'('https://eyereasoner.github.io/etc#actuator1', 39.27346198678276).
+true<='https://eyereasoner.github.io/etc#control1'('https://eyereasoner.github.io/etc#actuator2', 26.08).

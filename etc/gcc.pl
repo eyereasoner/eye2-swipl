@@ -46,4 +46,5 @@ inv(0, 1).
 inv(1, 0).
 
 % query
-'https://eyereasoner.github.io/etc#gcc'([1, 1, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0], _ANSWER) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#gcc'([1, 1, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0], _).

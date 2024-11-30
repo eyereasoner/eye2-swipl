@@ -14,4 +14,5 @@ pi(A, B, C, D, E) :-
     pi(F, B, L, D, M).
 
 % query
-'https://eyereasoner.github.io/etc#pi'(100000, _ANSWER) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#pi'(100000, _).

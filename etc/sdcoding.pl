@@ -97,8 +97,9 @@ bob([X, Y], 3) :-
     ).
 
 % superdense coding appearing an odd number of times
-'https://eyereasoner.github.io/etc#sdc'(N, M) :+
-    'https://eyereasoner.github.io/etc#sdconot'(N, M).
+'https://eyereasoner.github.io/etc#sdconot'(N, M) <=
+    'https://eyereasoner.github.io/etc#sdc'(N, M).
 
 % query
-'https://eyereasoner.github.io/etc#sdcoding'(_N, _M) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#sdcoding'(_, _).

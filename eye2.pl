@@ -5,9 +5,9 @@
 % See https://github.com/eyereasoner/eye2
 %
 
-:- op(1150, xfx, :+).
+:- op(1150, xfx, <=).
 
-:- dynamic((:+)/2).
+:- dynamic((<=)/2).
 :- dynamic(answer/1).
 :- dynamic(brake/0).
 :- dynamic(ether/3).
@@ -20,8 +20,8 @@ main :-
     nb_setval(limit, -1),
     nb_setval(fm, 0),
     nb_setval(mf, 0),
-    (   (_ :+ _)
-    ->  format(":- op(1150, xfx, :+).~n~n", [])
+    (   (_ <= _)
+    ->  format(":- op(1150, xfx, <=).~n~n", [])
     ;   version_info(Version),
         format("~w~n", [Version])
     ),
@@ -40,20 +40,20 @@ main :-
 
 % run eye2 abstract machine
 %
-% 1/ select rule P :+ C
-% 2/ prove P and if it fails backtrack to 1/
-% 3/ if C = true assert answer(P)
-%    else if C = false stop with return code 2
-%    else if ~C assert C, retract brake
+% 1/ select rule Conc <= Prem
+% 2/ prove Prem and if it fails backtrack to 1/
+% 3/ if Cconc = true assert answer(Prem)
+%    else if Conc = false stop with return code 2
+%    else if ~Conc assert Conc, retract brake
 % 4/ backtrack to 2/ and if it fails go to 5/
 % 5/ if brake
 %       if not stable start again at 1/
-%       else output all answers as P :+ true and stop
+%       else output all answers, ethers and stop
 %    else assert brake and start again at 1/
 %
 run :-
-    (   (Prem :+ Conc),     % 1/
-        copy_term((Prem :+ Conc), Rule, _),
+    (   (Conc <= Prem),     % 1/
+        copy_term((Conc <= Prem), Rule, _),
         Prem,               % 2/
         (   Conc = true     % 3/
         ->  (   \+answer(Prem)
@@ -62,11 +62,11 @@ run :-
             )
         ;   (   Conc = false
             ->  format("% inference fuse, return code 2~n", []),
-                portray_clause((Prem :+ false)),
+                portray_clause((false <= Prem)),
                 halt(2)
             ;   (   term_variables(Conc, [])
                 ->  Concl = Conc
-                ;   Concl = (true :+ Conc)
+                ;   Concl = (Conc <= true)
                 ),
                 \+Concl,
                 astep(Concl),
@@ -83,7 +83,7 @@ run :-
                 nb_setval(closure, NewClosure),
                 run
             ;   answer(Prem),
-                portray_clause((Prem :+ true)),
+                portray_clause((true <= Prem)),
                 fail
             ;   (   ether(_, _, _)
                 ->  format("~n%~n% Explain the reasoning~n%~n~n", []),

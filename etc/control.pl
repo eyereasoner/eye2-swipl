@@ -49,4 +49,5 @@
     M1 >= M2.
 
 % query
-'https://eyereasoner.github.io/etc#control1'(_O, _C) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#control1'(_, _).

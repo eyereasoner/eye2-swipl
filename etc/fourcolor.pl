@@ -1,6 +1,6 @@
 % See https://en.wikipedia.org/wiki/Four_color_theorem
 
-'https://eyereasoner.github.io/etc#colors'(_Map, Places) :-
+'https://eyereasoner.github.io/etc#colors'(_, Places) :-
     findall([Place, _], 'https://eyereasoner.github.io/etc#neighbours'(Place, _), Places),
     places(Places),
     !.
@@ -42,4 +42,5 @@ places([[Place, Color]|Tail]) :-
 'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Croatia', ['https://eyereasoner.github.io/etc#Slovenia', 'https://eyereasoner.github.io/etc#Hungary']).
 
 % query
-'https://eyereasoner.github.io/etc#colors'('https://eyereasoner.github.io/etc#mapEU', _X) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#colors'('https://eyereasoner.github.io/etc#mapEU', _).

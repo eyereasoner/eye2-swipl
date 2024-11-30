@@ -32,14 +32,15 @@ ackermann(A, B, C, D) :-
     ackermann(G, F, C, D).
 
 % query
-'https://eyereasoner.github.io/etc#ackermann'([0, 6], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([1, 2], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([1, 7], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([2, 2], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([2, 9], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([3, 4], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([3, 14], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([4, 0], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([4, 1], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([4, 2], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#ackermann'([5, 0], _ANSWER) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#ackermann'([0, 6], _),
+    'https://eyereasoner.github.io/etc#ackermann'([1, 2], _),
+    'https://eyereasoner.github.io/etc#ackermann'([1, 7], _),
+    'https://eyereasoner.github.io/etc#ackermann'([2, 2], _),
+    'https://eyereasoner.github.io/etc#ackermann'([2, 9], _),
+    'https://eyereasoner.github.io/etc#ackermann'([3, 4], _),
+    'https://eyereasoner.github.io/etc#ackermann'([3, 14], _),
+    'https://eyereasoner.github.io/etc#ackermann'([4, 0], _),
+    'https://eyereasoner.github.io/etc#ackermann'([4, 1], _),
+    'https://eyereasoner.github.io/etc#ackermann'([4, 2], _),
+    'https://eyereasoner.github.io/etc#ackermann'([5, 0], _).

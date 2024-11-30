@@ -2,10 +2,10 @@
 % See background paper https://arxiv.org/pdf/2010.12027.pdf
 
 % find paths in the state space from initial state to goal state within limits
-'https://eyereasoner.github.io/etc#findpath'(_SCOPE, [Goal, Path, Duration, Cost, Belief, Comfort, Limits]) :-
+'https://eyereasoner.github.io/etc#findpath'(_, [Goal, Path, Duration, Cost, Belief, Comfort, Limits]) :-
     findpaths([], Goal, [], 0.0, 0.0, 1.0, 1.0, Path, Duration, Cost, Belief, Comfort, Limits).
 
-findpaths(_Maps, Goal, Path, Duration, Cost, Belief, Comfort, Path, Duration, Cost, Belief, Comfort, _Limits) :-
+findpaths(_, Goal, Path, Duration, Cost, Belief, Comfort, Path, Duration, Cost, Belief, Comfort, _) :-
     Goal,
     !.
 findpaths(Maps_s, Goal, Path_s, Duration_s, Cost_s, Belief_s, Comfort_s, Path, Duration, Cost, Belief, Comfort, Limits) :-
@@ -113,14 +113,15 @@ conj_list((A, B), [A|C]) :-
 'https://eyereasoner.github.io/etc#location'('https://eyereasoner.github.io/etc#i1', 'https://eyereasoner.github.io/etc#gent').
 
 % query
-'https://eyereasoner.github.io/etc#findpath'(
-    'https://eyereasoner.github.io/etc#map_be',
-    [   'https://eyereasoner.github.io/etc#location'(_SUBJECT, 'https://eyereasoner.github.io/etc#oostende'),
-        _PATH,
-        _DURATION,
-        _COST,
-        _BELIEF,
-        _COMFORT,
-        [5000.0, 5.0, 0.2, 0.4, 1]
-    ]
-) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#findpath'(
+        'https://eyereasoner.github.io/etc#map_be',
+        [   'https://eyereasoner.github.io/etc#location'(_SUBJECT, 'https://eyereasoner.github.io/etc#oostende'),
+            _PATH,
+            _DURATION,
+            _COST,
+            _BELIEF,
+            _COMFORT,
+            [5000.0, 5.0, 0.2, 0.4, 1]
+        ]
+    ).

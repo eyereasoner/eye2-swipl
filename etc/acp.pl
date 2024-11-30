@@ -44,8 +44,8 @@
     length(D, 0).
 
 % query
-'https://eyereasoner.github.io/etc#Policy'(A),
-'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#allOfTest'),
-'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#anyOfTest'),
-'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#noneOfTest') :+
-    true.
+true <=
+    'https://eyereasoner.github.io/etc#Policy'(A),
+    'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#allOfTest'),
+    'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#anyOfTest'),
+    'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#noneOfTest').

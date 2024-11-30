@@ -1,3 +1,3 @@
-:- op(1150, xfx, :+).
+:- op(1150, xfx, <=).
 
-'https://eyereasoner.github.io/etc#move'(14, [left, centre, right]):+true.
+true<='https://eyereasoner.github.io/etc#move'(14, [left, centre, right]).

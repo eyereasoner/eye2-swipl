@@ -13,4 +13,5 @@
     Dl >= Db.
 
 % query
-'https://eyereasoner.github.io/etc#ageAbove'(_S, 80) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#ageAbove'(_, 80).

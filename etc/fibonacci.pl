@@ -18,15 +18,18 @@ fibonacci(A, B, C, D) :-
     B is E/C.
 
 % query
-'https://eyereasoner.github.io/etc#fibonacci'(1, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#fibonacci'(2, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#fibonacci'(3, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#fibonacci'(4, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#fibonacci'(5, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#fibonacci'(91, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#fibonacci'(283, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#fibonacci'(3674, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#golden_ratio'(1, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#golden_ratio'(10, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#golden_ratio'(100, _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#golden_ratio'(1000, _ANSWER) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#fibonacci'(1, _),
+    'https://eyereasoner.github.io/etc#fibonacci'(2, _),
+    'https://eyereasoner.github.io/etc#fibonacci'(3, _),
+    'https://eyereasoner.github.io/etc#fibonacci'(4, _),
+    'https://eyereasoner.github.io/etc#fibonacci'(5, _),
+    'https://eyereasoner.github.io/etc#fibonacci'(91, _),
+    'https://eyereasoner.github.io/etc#fibonacci'(283, _),
+    'https://eyereasoner.github.io/etc#fibonacci'(3674, _).
+
+true <=
+    'https://eyereasoner.github.io/etc#golden_ratio'(1, _),
+    'https://eyereasoner.github.io/etc#golden_ratio'(10, _),
+    'https://eyereasoner.github.io/etc#golden_ratio'(100, _),
+    'https://eyereasoner.github.io/etc#golden_ratio'(1000, _).

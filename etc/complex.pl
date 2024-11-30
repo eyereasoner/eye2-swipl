@@ -84,14 +84,15 @@ angular(A, B, C, D) :-
     D is 2*pi-C.
 
 % query
-'https://eyereasoner.github.io/etc#quotient'([[1, 0], [0, 1]], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#exponentiation'([[-1, 0], [0.5, 0]], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#exponentiation'([[e, 0], [0, pi]], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#log'([[e, 0], [-1, 0]], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#log'([[0, 1], [0, 1]], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#sin'([1.570796326794897, 1.316957896924817], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#cos'([0, -1.316957896924817], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#tan'([1.338972522294493, 0.4023594781085251], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#asin'([2, 0], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#acos'([2, 0], _ANSWER) :+ true.
-'https://eyereasoner.github.io/etc#atan'([1, 2], _ANSWER) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#quotient'([[1, 0], [0, 1]], _),
+    'https://eyereasoner.github.io/etc#exponentiation'([[-1, 0], [0.5, 0]], _),
+    'https://eyereasoner.github.io/etc#exponentiation'([[e, 0], [0, pi]], _),
+    'https://eyereasoner.github.io/etc#log'([[e, 0], [-1, 0]], _),
+    'https://eyereasoner.github.io/etc#log'([[0, 1], [0, 1]], _),
+    'https://eyereasoner.github.io/etc#sin'([1.570796326794897, 1.316957896924817], _),
+    'https://eyereasoner.github.io/etc#cos'([0, -1.316957896924817], _),
+    'https://eyereasoner.github.io/etc#tan'([1.338972522294493, 0.4023594781085251], _),
+    'https://eyereasoner.github.io/etc#asin'([2, 0], _),
+    'https://eyereasoner.github.io/etc#acos'([2, 0], _),
+    'https://eyereasoner.github.io/etc#atan'([1, 2], _).

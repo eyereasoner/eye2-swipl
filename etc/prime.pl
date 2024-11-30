@@ -117,9 +117,10 @@ divi(N, F, M, R, K) :-
 divi(N, _, M, N, M).
 
 % query
-'https://eyereasoner.github.io/eye#primerange'(0, 100, _ANSWER) :+ true.
-'https://eyereasoner.github.io/eye#primerange'(1000000, 1000100, _ANSWER) :+ true.
-'https://eyereasoner.github.io/eye#totient'(271, _ANSWER) :+ true.
-'https://eyereasoner.github.io/eye#totient'(2718281, _ANSWER) :+ true.
-'https://eyereasoner.github.io/eye#totient'(27182818284, _ANSWER) :+ true.
-'https://eyereasoner.github.io/eye#totient'(271828182845904, _ANSWER) :+ true.
+true <=
+    'https://eyereasoner.github.io/eye#primerange'(0, 100, _),
+    'https://eyereasoner.github.io/eye#primerange'(1000000, 1000100, _),
+    'https://eyereasoner.github.io/eye#totient'(271, _),
+    'https://eyereasoner.github.io/eye#totient'(2718281, _),
+    'https://eyereasoner.github.io/eye#totient'(27182818284, _),
+    'https://eyereasoner.github.io/eye#totient'(271828182845904, _).

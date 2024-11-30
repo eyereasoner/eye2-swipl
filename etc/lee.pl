@@ -65,4 +65,5 @@ path(A, B, [Wave|Waves], [B|Path]) :-
     path(A, B1, Waves, Path).
 
 % query
-'https://eyereasoner.github.io/etc#route'([[1, 1], [9, 8], [[[2, 3], [4, 5]], [[6, 6], [8, 8]]]], _ANSWER) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#route'([[1, 1], [9, 8], [[[2, 3], [4, 5]], [[6, 6], [8, 8]]]], _).

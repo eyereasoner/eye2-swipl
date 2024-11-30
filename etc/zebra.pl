@@ -42,4 +42,5 @@ nextto(X, Y, [_|Zs]) :-
     nextto(X, Y, Zs).
 
 % query
-'https://eyereasoner.github.io/etc#zebra'(_WaterDrinker, _ZebraOwner) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#zebra'(_, _).

@@ -449,6 +449,7 @@ compound1(Term) :-
     !.
 
 % query
-'http://eyereasoner.github.io/etc#equation'(x^2-3*x+2=0, x, _ANSWER) :+ true.
-'http://eyereasoner.github.io/etc#equation'(cos(x)*(1-2*sin(x))=0, x, _ANSWER) :+ true.
-'http://eyereasoner.github.io/etc#equation'(2^(2*x)-5*2^(x+1)+16=0, x, _ANSWER) :+ true.
+true <=
+    'http://eyereasoner.github.io/etc#equation'(x^2-3*x+2=0, x, _),
+    'http://eyereasoner.github.io/etc#equation'(cos(x)*(1-2*sin(x))=0, x, _),
+    'http://eyereasoner.github.io/etc#equation'(2^(2*x)-5*2^(x+1)+16=0, x, _).

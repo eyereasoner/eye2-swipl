@@ -1,3 +1,3 @@
-:- op(1150, xfx, :+).
+:- op(1150, xfx, <=).
 
-'https://eyereasoner.github.io/etc#Policy'('https://eyereasoner.github.io/etc#PolicyX'), 'https://eyereasoner.github.io/etc#pass'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#allOfTest'), 'https://eyereasoner.github.io/etc#pass'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#anyOfTest'), 'https://eyereasoner.github.io/etc#pass'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#noneOfTest'):+true.
+true<='https://eyereasoner.github.io/etc#Policy'('https://eyereasoner.github.io/etc#PolicyX'), 'https://eyereasoner.github.io/etc#pass'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#allOfTest'), 'https://eyereasoner.github.io/etc#pass'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#anyOfTest'), 'https://eyereasoner.github.io/etc#pass'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#noneOfTest').

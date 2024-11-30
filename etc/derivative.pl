@@ -106,7 +106,8 @@ s(A, B) :-
 s(A, A).
 
 % query
-'http://eyereasoner.github.io/etc#derivative'((x+1)*((x^2+2)*(x^3+3)), x, _ANSWER) :+ true.
-'http://eyereasoner.github.io/etc#derivative'(x/x/x/x/x/x/x/x/x/x, x, _ANSWER) :+ true.
-'http://eyereasoner.github.io/etc#derivative'(log(log(log(log(log(log(log(log(log(log(x)))))))))), x, _ANSWER) :+ true.
-'http://eyereasoner.github.io/etc#derivative'(x*x*x*x*x*x*x*x*x*x, x, _ANSWER) :+ true.
+true <=
+    'http://eyereasoner.github.io/etc#derivative'((x+1)*((x^2+2)*(x^3+3)), x, _),
+    'http://eyereasoner.github.io/etc#derivative'(x/x/x/x/x/x/x/x/x/x, x, _),
+    'http://eyereasoner.github.io/etc#derivative'(log(log(log(log(log(log(log(log(log(log(x)))))))))), x, _),
+    'http://eyereasoner.github.io/etc#derivative'(x*x*x*x*x*x*x*x*x*x, x, _).

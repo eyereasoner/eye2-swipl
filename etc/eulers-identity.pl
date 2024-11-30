@@ -33,4 +33,5 @@ angular(A, B, C, D) :-
     D is 2*pi-C.
 
 % query
-'https://eyereasoner.github.io/etc#exponentiation'([[e, 0], [0, pi]], Y), 'https://eyereasoner.github.io/etc#sum'([Y, [1, 0]], _ANSWER) :+ true.
+true <=
+    'https://eyereasoner.github.io/etc#exponentiation'([[e, 0], [0, pi]], Y), 'https://eyereasoner.github.io/etc#sum'([Y, [1, 0]], _).

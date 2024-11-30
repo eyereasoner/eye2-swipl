@@ -22,7 +22,7 @@ fac(s(A), B, C) :-
     fac(A, D, C).
 
 % query
-'https://eyereasoner.github.io/etc#multiply'(s(0), s(s(0)), A),
-'https://eyereasoner.github.io/etc#add'(A, s(s(s(0))), B),
-'https://eyereasoner.github.io/etc#factorial'(B, _C) :+
-    true.
+true <=
+    'https://eyereasoner.github.io/etc#multiply'(s(0), s(s(0)), A),
+    'https://eyereasoner.github.io/etc#add'(A, s(s(s(0))), B),
+    'https://eyereasoner.github.io/etc#factorial'(B, _).
