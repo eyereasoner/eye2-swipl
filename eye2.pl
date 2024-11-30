@@ -48,7 +48,7 @@ main :-
 % 4/ backtrack to 2/ and if it fails go to 5/
 % 5/ if brake
 %       if not stable start again at 1/
-%       else output all answers, ethers and stop
+%       else output answers, output ethers and stop
 %    else assert brake and start again at 1/
 %
 run :-
