@@ -32,7 +32,7 @@ ackermann(A, B, C, D) :-
     ackermann(G, F, C, D).
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#ackermann'([0, 6], _),
     'https://eyereasoner.github.io/etc#ackermann'([1, 2], _),
     'https://eyereasoner.github.io/etc#ackermann'([1, 7], _),

@@ -10018,5 +10018,5 @@
     call(A, K, B).
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#cycle'(_, _).

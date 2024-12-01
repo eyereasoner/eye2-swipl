@@ -42,5 +42,5 @@ places([[Place, Color]|Tail]) :-
 'https://eyereasoner.github.io/etc#neighbours'('https://eyereasoner.github.io/etc#Croatia', ['https://eyereasoner.github.io/etc#Slovenia', 'https://eyereasoner.github.io/etc#Hungary']).
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#colors'('https://eyereasoner.github.io/etc#mapEU', _).

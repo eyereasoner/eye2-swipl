@@ -44,7 +44,7 @@
     length(D, 0).
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#Policy'(A),
     'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#allOfTest'),
     'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#anyOfTest'),

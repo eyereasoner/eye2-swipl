@@ -18,7 +18,7 @@ fibonacci(A, B, C, D) :-
     B is E/C.
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#fibonacci'(1, _),
     'https://eyereasoner.github.io/etc#fibonacci'(2, _),
     'https://eyereasoner.github.io/etc#fibonacci'(3, _),
@@ -28,7 +28,7 @@ true <=
     'https://eyereasoner.github.io/etc#fibonacci'(283, _),
     'https://eyereasoner.github.io/etc#fibonacci'(3674, _).
 
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#golden_ratio'(1, _),
     'https://eyereasoner.github.io/etc#golden_ratio'(10, _),
     'https://eyereasoner.github.io/etc#golden_ratio'(100, _),

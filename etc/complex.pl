@@ -84,7 +84,7 @@ angular(A, B, C, D) :-
     D is 2*pi-C.
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#quotient'([[1, 0], [0, 1]], _),
     'https://eyereasoner.github.io/etc#exponentiation'([[-1, 0], [0.5, 0]], _),
     'https://eyereasoner.github.io/etc#exponentiation'([[e, 0], [0, pi]], _),

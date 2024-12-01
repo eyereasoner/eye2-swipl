@@ -43,7 +43,7 @@ t([1, 1, 0, l], 1).
 t([1, "#", 1, s], halt).
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#compute'([1, 0, 1, 0, 0, 1], _),
     'https://eyereasoner.github.io/etc#compute'([1, 0, 1, 1, 1, 1], _),
     'https://eyereasoner.github.io/etc#compute'([1, 1, 1, 1, 1, 1], _),

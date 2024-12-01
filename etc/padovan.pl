@@ -19,7 +19,7 @@ padovan(A, B, C, D, E) :-
     B is E/C.
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#padovan'(1, _),
     'https://eyereasoner.github.io/etc#padovan'(2, _),
     'https://eyereasoner.github.io/etc#padovan'(3, _),
@@ -29,7 +29,7 @@ true <=
     'https://eyereasoner.github.io/etc#padovan'(283, _),
     'https://eyereasoner.github.io/etc#padovan'(3674, _).
 
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#plastic_ratio'(1, _),
     'https://eyereasoner.github.io/etc#plastic_ratio'(10, _),
     'https://eyereasoner.github.io/etc#plastic_ratio'(100, _),

@@ -49,5 +49,5 @@
     M1 >= M2.
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#control1'(_, _).

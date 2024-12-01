@@ -11,5 +11,5 @@
     Day is F rem 31+1.
 
 % query
-(true <= 'https://eyereasoner.github.io/etc#easter'(Year, [_, _])) :-
+(true ::- 'https://eyereasoner.github.io/etc#easter'(Year, [_, _])) :-
     between(2021, 2050, Year).

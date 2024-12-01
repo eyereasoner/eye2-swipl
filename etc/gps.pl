@@ -113,7 +113,7 @@ conj_list((A, B), [A|C]) :-
 'https://eyereasoner.github.io/etc#location'('https://eyereasoner.github.io/etc#i1', 'https://eyereasoner.github.io/etc#gent').
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#findpath'(
         'https://eyereasoner.github.io/etc#map_be',
         [   'https://eyereasoner.github.io/etc#location'(_SUBJECT, 'https://eyereasoner.github.io/etc#oostende'),

@@ -5,8 +5,8 @@
 :- dynamic('https://eyereasoner.github.io/etc#is'/2).
 
 % some x is a good cobbler
-'https://eyereasoner.github.io/etc#is'(_, 'https://eyereasoner.github.io/etc#good'('https://eyereasoner.github.io/etc#Cobbler')) <= true.
+'https://eyereasoner.github.io/etc#is'(_, 'https://eyereasoner.github.io/etc#good'('https://eyereasoner.github.io/etc#Cobbler')) ::- true.
 
 % is there some x which is good at some y
-true <=
-    ('https://eyereasoner.github.io/etc#is'(_, 'https://eyereasoner.github.io/etc#good'(_)) <= true).
+true ::-
+    ('https://eyereasoner.github.io/etc#is'(_, 'https://eyereasoner.github.io/etc#good'(_)) ::- true).

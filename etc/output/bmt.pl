@@ -1,4 +1,4 @@
-:- op(1200, xfx, <=).
+:- op(1200, xfx, ::-).
 
 answer('https://eyereasoner.github.io/etc#cycle'('https://eyereasoner.github.io/etc#i89', ['https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48', 'https://eyereasoner.github.io/etc#i48'])).
 answer('https://eyereasoner.github.io/etc#cycle'('https://eyereasoner.github.io/etc#i89', ['https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9', 'https://eyereasoner.github.io/etc#i9'])).

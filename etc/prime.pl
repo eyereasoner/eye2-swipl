@@ -117,7 +117,7 @@ divi(N, F, M, R, K) :-
 divi(N, _, M, N, M).
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/eye#primerange'(0, 100, _),
     'https://eyereasoner.github.io/eye#primerange'(1000000, 1000100, _),
     'https://eyereasoner.github.io/eye#totient'(271, _),

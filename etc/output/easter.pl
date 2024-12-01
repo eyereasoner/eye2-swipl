@@ -1,4 +1,4 @@
-:- op(1200, xfx, <=).
+:- op(1200, xfx, ::-).
 
 answer('https://eyereasoner.github.io/etc#easter'(2021, [4, 4])).
 answer('https://eyereasoner.github.io/etc#easter'(2022, [4, 17])).

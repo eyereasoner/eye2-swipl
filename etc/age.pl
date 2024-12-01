@@ -12,5 +12,5 @@
     Ta < T.
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#ageAbove'(_, 80).

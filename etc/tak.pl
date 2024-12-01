@@ -14,5 +14,5 @@
     'https://eyereasoner.github.io/etc#tak'([A1, A2, A3], A).
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#tak'([34, 13, 8], _).

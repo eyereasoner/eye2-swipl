@@ -9,5 +9,5 @@
     'https://eyereasoner.github.io/etc#move'(M, [C, B, A]).
 
 % query
-true <=
+true ::-
     'https://eyereasoner.github.io/etc#move'(14, [left, centre, right]).
