@@ -6,11 +6,10 @@
 % is the age of a person above some years?
 'https://eyereasoner.github.io/etc#ageAbove'(S, A) :-
     'https://eyereasoner.github.io/etc#birthDay'(S, [Yb, Mb, Db]),
+    Ya is Yb+A,
+    date_time_stamp(date(Ya, Mb, Db, 0, 0, 0, 0, -, -), Ta),
     get_time(T),
-    stamp_date_time(T, date(Yl, Ml, Dl, _, _, _, _, _, _), 0),
-    Yl >= Yb+A,
-    Ml >= Mb,
-    Dl >= Db.
+    Ta < T.
 
 % query
 true <=
