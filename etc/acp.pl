@@ -1,43 +1,43 @@
 % Access control policy example
 
-'https://eyereasoner.github.io/etc#policy'('https://eyereasoner.github.io/etc#test1', 'https://eyereasoner.github.io/etc#PolicyX').
-'https://eyereasoner.github.io/etc#has'('https://eyereasoner.github.io/etc#test1', 'https://eyereasoner.github.io/etc#A').
-'https://eyereasoner.github.io/etc#has'('https://eyereasoner.github.io/etc#test1', 'https://eyereasoner.github.io/etc#B').
-'https://eyereasoner.github.io/etc#has'('https://eyereasoner.github.io/etc#test1', 'https://eyereasoner.github.io/etc#C').
-'https://eyereasoner.github.io/etc#Policy'('https://eyereasoner.github.io/etc#PolicyX').
-'https://eyereasoner.github.io/etc#allOf'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#A').
-'https://eyereasoner.github.io/etc#allOf'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#B').
-'https://eyereasoner.github.io/etc#anyOf'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#C').
-'https://eyereasoner.github.io/etc#noneOf'('https://eyereasoner.github.io/etc#PolicyX', 'https://eyereasoner.github.io/etc#D').
+'urn:example:policy'('urn:example:test1', 'urn:example:PolicyX').
+'urn:example:has'('urn:example:test1', 'urn:example:A').
+'urn:example:has'('urn:example:test1', 'urn:example:B').
+'urn:example:has'('urn:example:test1', 'urn:example:C').
+'urn:example:Policy'('urn:example:PolicyX').
+'urn:example:allOf'('urn:example:PolicyX', 'urn:example:A').
+'urn:example:allOf'('urn:example:PolicyX', 'urn:example:B').
+'urn:example:anyOf'('urn:example:PolicyX', 'urn:example:C').
+'urn:example:noneOf'('urn:example:PolicyX', 'urn:example:D').
 
-'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#allOfTest') :-
-    'https://eyereasoner.github.io/etc#policy'(B, A),
-    'https://eyereasoner.github.io/etc#Policy'(A),
+'urn:example:pass'(A, 'urn:example:allOfTest') :-
+    'urn:example:policy'(B, A),
+    'urn:example:Policy'(A),
     forall(
-        'https://eyereasoner.github.io/etc#allOf'(A, C),
-        'https://eyereasoner.github.io/etc#has'(B, C)
+        'urn:example:allOf'(A, C),
+        'urn:example:has'(B, C)
     ).
 
-'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#anyOfTest') :-
-    'https://eyereasoner.github.io/etc#policy'(B, A),
-    'https://eyereasoner.github.io/etc#Policy'(A),
+'urn:example:pass'(A, 'urn:example:anyOfTest') :-
+    'urn:example:policy'(B, A),
+    'urn:example:Policy'(A),
     findall(C,
         (
-            'https://eyereasoner.github.io/etc#anyOf'(A, C),
-            'https://eyereasoner.github.io/etc#has'(B, C)
+            'urn:example:anyOf'(A, C),
+            'urn:example:has'(B, C)
         ),
         D
     ),
     length(D, E),
     E \= 0.
 
-'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#noneOfTest') :-
-    'https://eyereasoner.github.io/etc#policy'(B, A),
-     'https://eyereasoner.github.io/etc#Policy'(A),
+'urn:example:pass'(A, 'urn:example:noneOfTest') :-
+    'urn:example:policy'(B, A),
+     'urn:example:Policy'(A),
     findall(C,
         (
-            'https://eyereasoner.github.io/etc#noneOf'(A, C),
-            'https://eyereasoner.github.io/etc#has'(B, C)
+            'urn:example:noneOf'(A, C),
+            'urn:example:has'(B, C)
         ),
         D
     ),
@@ -45,7 +45,7 @@
 
 % query
 true ::-
-    'https://eyereasoner.github.io/etc#Policy'(A),
-    'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#allOfTest'),
-    'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#anyOfTest'),
-    'https://eyereasoner.github.io/etc#pass'(A, 'https://eyereasoner.github.io/etc#noneOfTest').
+    'urn:example:Policy'(A),
+    'urn:example:pass'(A, 'urn:example:allOfTest'),
+    'urn:example:pass'(A, 'urn:example:anyOfTest'),
+    'urn:example:pass'(A, 'urn:example:noneOfTest').

@@ -2,11 +2,11 @@
 % Example from https://shs.hal.science/halshs-04148373/document
 % Using functional logic http://intrologic.stanford.edu/chapters/chapter_11.html
 
-:- dynamic('https://eyereasoner.github.io/etc#is'/2).
+:- dynamic('urn:example:is'/2).
 
 % some x is a good cobbler
-'https://eyereasoner.github.io/etc#is'(_, 'https://eyereasoner.github.io/etc#good'('https://eyereasoner.github.io/etc#Cobbler')) ::- true.
+'urn:example:is'(_, 'urn:example:good'('urn:example:Cobbler')) ::- true.
 
 % is there some x which is good at some y
 true ::-
-    ('https://eyereasoner.github.io/etc#is'(_, 'https://eyereasoner.github.io/etc#good'(_)) ::- true).
+    ('urn:example:is'(_, 'urn:example:good'(_)) ::- true).

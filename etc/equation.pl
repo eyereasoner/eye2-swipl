@@ -1,6 +1,6 @@
 % Mathematical library for solving equations
 
-'http://eyereasoner.github.io/etc#equation'(A, B, C) :-
+'urn:example:equation'(A, B, C) :-
     findall(E,
         (   solve_equation(A, B, B=F),
             E is F
@@ -450,6 +450,6 @@ compound1(Term) :-
 
 % query
 true ::-
-    'http://eyereasoner.github.io/etc#equation'(x^2-3*x+2=0, x, _),
-    'http://eyereasoner.github.io/etc#equation'(cos(x)*(1-2*sin(x))=0, x, _),
-    'http://eyereasoner.github.io/etc#equation'(2^(2*x)-5*2^(x+1)+16=0, x, _).
+    'urn:example:equation'(x^2-3*x+2=0, x, _),
+    'urn:example:equation'(cos(x)*(1-2*sin(x))=0, x, _),
+    'urn:example:equation'(2^(2*x)-5*2^(x+1)+16=0, x, _).

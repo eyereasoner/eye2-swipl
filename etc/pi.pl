@@ -1,7 +1,7 @@
 % Calculate pi using Nilakantha series
 % See http://www.wikihow.com/Calculate-Pi
 
-'https://eyereasoner.github.io/etc#pi'(A, B) :-
+'urn:example:pi'(A, B) :-
     pi(1, A, 0, C, 1),
     B is 3+4*C.
 
@@ -15,4 +15,4 @@ pi(A, B, C, D, E) :-
 
 % query
 true ::-
-    'https://eyereasoner.github.io/etc#pi'(100000, _).
+    'urn:example:pi'(100000, _).

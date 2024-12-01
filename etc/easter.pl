@@ -1,6 +1,6 @@
 % calculate easter date
 
-'https://eyereasoner.github.io/etc#easter'(Year, [Month, Day]) :-
+'urn:example:easter'(Year, [Month, Day]) :-
     A is Year rem 19,
     B is Year//100,
     C is Year rem 100,
@@ -11,5 +11,5 @@
     Day is F rem 31+1.
 
 % query
-(true ::- 'https://eyereasoner.github.io/etc#easter'(Year, [_, _])) :-
+(true ::- 'urn:example:easter'(Year, [_, _])) :-
     between(2021, 2050, Year).

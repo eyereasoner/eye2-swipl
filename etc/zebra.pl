@@ -13,8 +13,8 @@
 % Expected solution: if the problem is modelled correctly by this program then the only solution set should be:
 % WaterDrinker = norwegian, ZebraOwner = japanese.
 
-% 'https://eyereasoner.github.io/etc#solve_zebra'/2 - The main predicate for solving the puzzle
-'https://eyereasoner.github.io/etc#zebra'(WaterDrinker, ZebraOwner) :-
+% 'urn:example:solve_zebra'/2 - The main predicate for solving the puzzle
+'urn:example:zebra'(WaterDrinker, ZebraOwner) :-
     length(Houses, 5),                                                          % 1. There are five houses.
     member(house(red, english, _, _, _), Houses),                               % 2. The Englishman lives in the red house.
     member(house(_, spanish, dog, _, _), Houses),                               % 3. The Spaniard owns the dog.
@@ -43,4 +43,4 @@ nextto(X, Y, [_|Zs]) :-
 
 % query
 true ::-
-    'https://eyereasoner.github.io/etc#zebra'(_, _).
+    'urn:example:zebra'(_, _).

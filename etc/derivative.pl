@@ -1,6 +1,6 @@
 % Mathematical library for derivatives
 
-'http://eyereasoner.github.io/etc#derivative'(A, B, C) :-
+'urn:example:derivative'(A, B, C) :-
     derivative(A, B, C).
 
 derivative(U, X, Y) :-
@@ -107,7 +107,7 @@ s(A, A).
 
 % query
 true ::-
-    'http://eyereasoner.github.io/etc#derivative'((x+1)*((x^2+2)*(x^3+3)), x, _),
-    'http://eyereasoner.github.io/etc#derivative'(x/x/x/x/x/x/x/x/x/x, x, _),
-    'http://eyereasoner.github.io/etc#derivative'(log(log(log(log(log(log(log(log(log(log(x)))))))))), x, _),
-    'http://eyereasoner.github.io/etc#derivative'(x*x*x*x*x*x*x*x*x*x, x, _).
+    'urn:example:derivative'((x+1)*((x^2+2)*(x^3+3)), x, _),
+    'urn:example:derivative'(x/x/x/x/x/x/x/x/x/x, x, _),
+    'urn:example:derivative'(log(log(log(log(log(log(log(log(log(log(x)))))))))), x, _),
+    'urn:example:derivative'(x*x*x*x*x*x*x*x*x*x, x, _).

@@ -2,7 +2,7 @@
 % See https://en.wikipedia.org/wiki/Ackermann_function
 
 % ackermann(x, y, z)
-'https://eyereasoner.github.io/etc#ackermann'([A, B], C) :-
+'urn:example:ackermann'([A, B], C) :-
     D is B+3,
     ackermann(A, D, 2, E),
     C is E-3.
@@ -33,14 +33,14 @@ ackermann(A, B, C, D) :-
 
 % query
 true ::-
-    'https://eyereasoner.github.io/etc#ackermann'([0, 6], _),
-    'https://eyereasoner.github.io/etc#ackermann'([1, 2], _),
-    'https://eyereasoner.github.io/etc#ackermann'([1, 7], _),
-    'https://eyereasoner.github.io/etc#ackermann'([2, 2], _),
-    'https://eyereasoner.github.io/etc#ackermann'([2, 9], _),
-    'https://eyereasoner.github.io/etc#ackermann'([3, 4], _),
-    'https://eyereasoner.github.io/etc#ackermann'([3, 14], _),
-    'https://eyereasoner.github.io/etc#ackermann'([4, 0], _),
-    'https://eyereasoner.github.io/etc#ackermann'([4, 1], _),
-    'https://eyereasoner.github.io/etc#ackermann'([4, 2], _),
-    'https://eyereasoner.github.io/etc#ackermann'([5, 0], _).
+    'urn:example:ackermann'([0, 6], _),
+    'urn:example:ackermann'([1, 2], _),
+    'urn:example:ackermann'([1, 7], _),
+    'urn:example:ackermann'([2, 2], _),
+    'urn:example:ackermann'([2, 9], _),
+    'urn:example:ackermann'([3, 4], _),
+    'urn:example:ackermann'([3, 14], _),
+    'urn:example:ackermann'([4, 0], _),
+    'urn:example:ackermann'([4, 1], _),
+    'urn:example:ackermann'([4, 2], _),
+    'urn:example:ackermann'([5, 0], _).

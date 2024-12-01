@@ -1,6 +1,6 @@
 % See https://en.wikipedia.org/wiki/Prime_number
 
-'https://eyereasoner.github.io/eye#primerange'(A, B, L) :-
+'urn:example:primerange'(A, B, L) :-
     findall(I, (between(A, B, I), prime(I)), L).
 
 prime(2).
@@ -30,7 +30,7 @@ factor(N, L) :-
 % for the argument N.
 %   (integer, integer) (+, ?)
 
-'https://eyereasoner.github.io/eye#totient'(N, Phi) :-
+'urn:example:totient'(N, Phi) :-
     prime_factors_mult(N, L),
     to_phi(L, Phi).
 
@@ -118,9 +118,9 @@ divi(N, _, M, N, M).
 
 % query
 true ::-
-    'https://eyereasoner.github.io/eye#primerange'(0, 100, _),
-    'https://eyereasoner.github.io/eye#primerange'(1000000, 1000100, _),
-    'https://eyereasoner.github.io/eye#totient'(271, _),
-    'https://eyereasoner.github.io/eye#totient'(2718281, _),
-    'https://eyereasoner.github.io/eye#totient'(27182818284, _),
-    'https://eyereasoner.github.io/eye#totient'(271828182845904, _).
+    'urn:example:primerange'(0, 100, _),
+    'urn:example:primerange'(1000000, 1000100, _),
+    'urn:example:totient'(271, _),
+    'urn:example:totient'(2718281, _),
+    'urn:example:totient'(27182818284, _),
+    'urn:example:totient'(271828182845904, _).
