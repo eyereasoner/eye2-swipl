@@ -12,7 +12,7 @@
 :- dynamic(brake/0).
 :- dynamic(ether/3).
 
-version_info('eye2 v1.0.2 (2024-12-01)').
+version_info('eye2 v1.0.3 (2024-12-01)').
 
 % main goal
 main :-
@@ -83,7 +83,7 @@ run :-
                 nb_setval(closure, NewClosure),
                 run
             ;   answer(Prem),
-                portray_clause((true <= Prem)),
+                portray_clause(answer(Prem)),
                 fail
             ;   (   ether(_, _, _)
                 ->  format("~n%~n% Explain the reasoning~n%~n~n", []),

@@ -1,9 +1,9 @@
 :- op(1200, xfx, <=).
 
-true<='https://eyereasoner.github.io/etc#sdcoding'(1, 1).
-true<='https://eyereasoner.github.io/etc#sdcoding'(3, 3).
-true<='https://eyereasoner.github.io/etc#sdcoding'(0, 0).
-true<='https://eyereasoner.github.io/etc#sdcoding'(2, 2).
+answer('https://eyereasoner.github.io/etc#sdcoding'(1, 1)).
+answer('https://eyereasoner.github.io/etc#sdcoding'(3, 3)).
+answer('https://eyereasoner.github.io/etc#sdcoding'(0, 0)).
+answer('https://eyereasoner.github.io/etc#sdcoding'(2, 2)).
 
 %
 % Explain the reasoning

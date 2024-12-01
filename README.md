@@ -8,11 +8,11 @@ to fail if the deductive closure at level `n` is not yet stable.
 Variables are interpreted as universally quantified variables except for
 conclusion-only variables which are interpreted existentially.
 
-Queries are posed and answered as `true <= premise.`
+Queries are posed as `true <= premise.` and answered as `answer(premise_inst).`
 
-Proofs steps are `ether((conclusion <= premise), premise_inst, conclusion_inst).`
+Proofs steps are `ether((conclusion <= premise), premise_inst, conclusion_inst).`.
 
-Inference fuses return code 2 with output `false <= premise.`
+Inference fuses return code 2 with output `false <= premise.`.
 
 ## Installation and test
 

@@ -1,9 +1,9 @@
 :- op(1200, xfx, <=).
 
-true<='https://eyereasoner.github.io/etc#path'('https://eyereasoner.github.io/etc#angers', 'https://eyereasoner.github.io/etc#nantes').
-true<='https://eyereasoner.github.io/etc#path'('https://eyereasoner.github.io/etc#lemans', 'https://eyereasoner.github.io/etc#nantes').
-true<='https://eyereasoner.github.io/etc#path'('https://eyereasoner.github.io/etc#chartres', 'https://eyereasoner.github.io/etc#nantes').
-true<='https://eyereasoner.github.io/etc#path'('https://eyereasoner.github.io/etc#paris', 'https://eyereasoner.github.io/etc#nantes').
+answer('https://eyereasoner.github.io/etc#path'('https://eyereasoner.github.io/etc#angers', 'https://eyereasoner.github.io/etc#nantes')).
+answer('https://eyereasoner.github.io/etc#path'('https://eyereasoner.github.io/etc#lemans', 'https://eyereasoner.github.io/etc#nantes')).
+answer('https://eyereasoner.github.io/etc#path'('https://eyereasoner.github.io/etc#chartres', 'https://eyereasoner.github.io/etc#nantes')).
+answer('https://eyereasoner.github.io/etc#path'('https://eyereasoner.github.io/etc#paris', 'https://eyereasoner.github.io/etc#nantes')).
 
 %
 % Explain the reasoning

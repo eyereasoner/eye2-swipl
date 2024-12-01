@@ -1,8 +1,8 @@
 :- op(1200, xfx, <=).
 
-true<='https://eyereasoner.github.io/etc#complies'('https://eyereasoner.github.io/etc#alice', true).
-true<='https://eyereasoner.github.io/etc#complies'('https://eyereasoner.github.io/etc#carol', false).
-true<='https://eyereasoner.github.io/etc#complies'('https://eyereasoner.github.io/etc#bob', false).
+answer('https://eyereasoner.github.io/etc#complies'('https://eyereasoner.github.io/etc#alice', true)).
+answer('https://eyereasoner.github.io/etc#complies'('https://eyereasoner.github.io/etc#carol', false)).
+answer('https://eyereasoner.github.io/etc#complies'('https://eyereasoner.github.io/etc#bob', false)).
 
 %
 % Explain the reasoning
