@@ -44,7 +44,7 @@ main :-
 % 2/ prove Prem and if it fails backtrack to 1/
 % 3/ if Conc = true assert answer(Prem)
 %    else if Conc = false stop with return code 2
-%    else if ~Conc assert Conc, retract brake
+%    else if ~Conc assert Conc and retract brake
 % 4/ backtrack to 2/ and if it fails go to 5/
 % 5/ if brake
 %       if not stable start again at 1/
