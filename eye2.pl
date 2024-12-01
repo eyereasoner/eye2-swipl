@@ -42,7 +42,7 @@ main :-
 %
 % 1/ select rule Conc <= Prem
 % 2/ prove Prem and if it fails backtrack to 1/
-% 3/ if Cconc = true assert answer(Prem)
+% 3/ if Conc = true assert answer(Prem)
 %    else if Conc = false stop with return code 2
 %    else if ~Conc assert Conc, retract brake
 % 4/ backtrack to 2/ and if it fails go to 5/
