@@ -32,7 +32,6 @@ cd etc
 - current way to produce proof steps
 - avoiding loops that could occur with backward chaining
 
-
 ## Background
 
 - Personal notes by Tim Berners-Lee: [Design Issues](https://www.w3.org/DesignIssues/)
