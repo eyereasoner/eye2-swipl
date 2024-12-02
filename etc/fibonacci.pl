@@ -18,7 +18,7 @@ fibonacci(A, B, C, D) :-
     B is E/C.
 
 % query
-true ::-
+true ?-
     'urn:example:fibonacci'(1, _),
     'urn:example:fibonacci'(2, _),
     'urn:example:fibonacci'(3, _),
@@ -28,7 +28,7 @@ true ::-
     'urn:example:fibonacci'(283, _),
     'urn:example:fibonacci'(3674, _).
 
-true ::-
+true ?-
     'urn:example:golden_ratio'(1, _),
     'urn:example:golden_ratio'(10, _),
     'urn:example:golden_ratio'(100, _),

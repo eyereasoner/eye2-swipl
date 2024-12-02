@@ -218,5 +218,5 @@ lists_fr([[A|B]|C], [A|D], [B|E]) :-
     lists_fr(C, D, E).
 
 % query
-true ::-
+true ?-
     'urn:example:enigma1225'(8, _).

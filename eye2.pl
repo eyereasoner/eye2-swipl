@@ -5,14 +5,14 @@
 % See https://github.com/eyereasoner/eye2
 %
 
-:- op(1200, xfx, ::-).
+:- op(1200, xfx, ?-).
 
-:- dynamic((::-)/2).
+:- dynamic((?-)/2).
 :- dynamic(answer/1).
 :- dynamic(brake/0).
 :- dynamic(ether/3).
 
-version_info('eye2 v1.0.5 (2024-12-01)').
+version_info('eye2 v1.0.6 (2024-12-02)').
 
 % main goal
 main :-
@@ -20,8 +20,8 @@ main :-
     nb_setval(limit, -1),
     nb_setval(fm, 0),
     nb_setval(mf, 0),
-    (   (_ ::- _)
-    ->  format(":- op(1200, xfx, ::-).~n~n", [])
+    (   (_ ?- _)
+    ->  format(":- op(1200, xfx, ?-).~n~n", [])
     ;   version_info(Version),
         format("~w~n", [Version])
     ),
@@ -40,7 +40,7 @@ main :-
 
 % run eye2 abstract machine
 %
-% 1/ select rule Conc ::- Prem
+% 1/ select rule Conc ?- Prem
 % 2/ prove Prem and if it fails backtrack to 1/
 % 3/ if Conc = true assert answer(Prem)
 %    else if Conc = false stop with return code 2
@@ -52,8 +52,8 @@ main :-
 %    else assert brake and start again at 1/
 %
 run :-
-    (   (Conc ::- Prem),    % 1/
-        copy_term((Conc ::- Prem), Rule, _),
+    (   (Conc ?- Prem),    % 1/
+        copy_term((Conc ?- Prem), Rule, _),
         Prem,               % 2/
         (   Conc = true     % 3/
         ->  (   \+answer(Prem)
@@ -66,7 +66,7 @@ run :-
                 halt(2)
             ;   (   term_variables(Conc, [])
                 ->  Concl = Conc
-                ;   Concl = (Conc ::- true)
+                ;   Concl = (Conc ?- true)
                 ),
                 \+Concl,
                 astep(Concl),

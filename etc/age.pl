@@ -12,5 +12,5 @@
     Ta < T.
 
 % query
-true ::-
+true ?-
     'urn:example:ageAbove'(_, 80).

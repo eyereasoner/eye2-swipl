@@ -1,4 +1,4 @@
-:- op(1200, xfx, ::-).
+:- op(1200, xfx, ?-).
 
 answer('urn:example:cycle'('urn:example:i88', ['urn:example:i3', 'urn:example:i3', 'urn:example:i3', 'urn:example:i3', 'urn:example:i3', 'urn:example:i3', 'urn:example:i3', 'urn:example:i3', 'urn:example:i3', 'urn:example:i3', 'urn:example:i3'])).
 answer('urn:example:cycle'('urn:example:i88', ['urn:example:i54', 'urn:example:i54', 'urn:example:i54', 'urn:example:i54', 'urn:example:i54', 'urn:example:i54', 'urn:example:i54', 'urn:example:i54', 'urn:example:i54', 'urn:example:i54', 'urn:example:i54'])).
