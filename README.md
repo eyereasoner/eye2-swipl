@@ -6,7 +6,7 @@ It performs forward chaining for `conclusion ?- premise` rules and uses `stable(
 to fail if the deductive closure at level `n` is not yet stable.
 
 Variables are interpreted as universally quantified variables except for
-conclusion-only variables which are interpreted existentially.
+`conclusion ?- premise` conclusion-only variables which are interpreted existentially.
 
 Queries are posed as `true ?- premise` and answered as `answer(premise_inst)`.
 
@@ -22,6 +22,16 @@ Install [SWI-Prolog](https://www.swi-prolog.org/Download.html) and run
 cd etc
 ./test
 ```
+
+## Rationale for `conclusion ?- premise`
+
+- conclusion can be a conjunction
+- conclusion can be `false` to blow an inference fuse
+- conclusion can be `true` to pose a query
+- conclusion-only variables are existentials
+- current way to produce proof steps
+- avoiding loops that could occur with backward chaining
+
 
 ## Background
 
