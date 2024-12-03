@@ -1,18 +1,11 @@
 # eye2
 
-A reasoner using Webized Prolog which basically means that atoms can be IRIs.
-
-It performs forward chaining for `conclusion ?- premise` rules and uses `stable(n)`
-to fail if the deductive closure at level `n` is not yet stable.
-
-Variables are interpreted as universally quantified variables except for
-`conclusion ?- premise` conclusion-only variables which are interpreted existentially.
-
-Queries are posed as `true ?- premise` and answered as `answer(premise_inst)`.
-
-Proofs steps are `ether((conclusion ?- premise), premise_inst, conclusion_inst)`.
-
-Inference fuses return code 2 with output `false ?- premise`.
+- A reasoner using Webized Prolog which basically means that atoms can be IRIs.
+- It performs instantiation for `conclusion ?- premise` rules and uses `stable(n)` to fail if the deductive closure at level `n` is not yet stable.
+- Proofs steps are `ether((conclusion ?- premise), premise_inst, conclusion_inst)` and `conclusion_inst` is asserted.
+- Variables are interpreted as universally quantified variables except for `conclusion ?- premise` conclusion-only variables which are interpreted existentially.
+- Queries are posed as `true ?- premise` and answered as `answer(premise_inst)`.
+- Inference fuses are blown as `false ?- premise` and the reasoning stops with return code 2.
 
 ## Installation and test
 
