@@ -1,8 +1,8 @@
-% ------------------
-% eye2 -- Jos De Roo
-% ------------------
+% ------------------------
+% eye2-swipl -- Jos De Roo
+% ------------------------
 %
-% See https://github.com/eyereasoner/eye2
+% See https://github.com/eyereasoner/eye2-swipl
 %
 
 :- op(1200, xfx, ?-).

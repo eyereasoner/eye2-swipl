@@ -1,4 +1,4 @@
-# eye2
+# eye2-swipl
 
 - A reasoner using webized prolog which basically means that atoms can be IRIs.
 - Besides top-down reasoning with `conclusion :- premise` rules, it also does bottom-up reasoning with `conclusion ?- premise` rules.
